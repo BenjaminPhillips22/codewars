@@ -9,15 +9,10 @@ def sum_two_smallest_numbers(numbers):
 
 # %%
 
-# test
+# tests
 
 
-print("?")
-print(sum_two_smallest_numbers([-3, -5, 0, -2, 1, 2, 5]))
-print(sum_two_smallest_numbers(
-      [10, 343445353, 3453445, 3453545353453]))
-
-# %%
-sorted([10, 343445353, 3453445, 3453545353453])
-assert (sum_two_smallest_numbers([5, 8, 12, 18, 22]) == 13), "didn't passed"
-print(10 % 1)
+assert (sum_two_smallest_numbers([5, 8, 12, 18, 22]) == 13), "didn't pass"
+assert (sum_two_smallest_numbers([-3, -5, 0, -2, 1, 2, 5])), "didn't pass"
+assert (sum_two_smallest_numbers(
+      [10, 343445353, 3453445, 3453545353453])), "didn't pass"
