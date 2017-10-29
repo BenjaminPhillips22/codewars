@@ -19,7 +19,7 @@ def encrypt(text, n):
 
 # %%
 
-# tests
+# some tests
 
 print(encrypt("This is a test!", 1) == "hsi  etTi sats!")
 print(decrypt("Thsi  etTi sats!", 1) == "This is a test!")
