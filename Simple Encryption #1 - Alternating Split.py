@@ -9,8 +9,6 @@ Do this n times!
 
 # %%
 
-a = 'hsi  etTi sats!'
-
 
 def decrypt(encrypted_text, n):
     if not encrypted_text or n <= 0:
