@@ -14,7 +14,7 @@ def decrypt(encrypted_text, n):
     if not encrypted_text or n <= 0:
         return encrypted_text
 
-    for i in range(n+1, n+100):
+    for i in range(n+1, n+1000):
         if encrypted_text == encrypt(encrypted_text, i):
             ma = i
             break
