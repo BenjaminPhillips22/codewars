@@ -11,13 +11,13 @@ Find max(abs(length(x) − length(y)))
 
 
 def mxdiflg(a1, a2):
-    a1_len = [len(i) for i ing a1]
-    return a1_len
+    if not a1 or not a2:
+        return -1
 
-
-
-
-
+    return max([len(sorted(a1, key=len)[-1]) -
+                len(sorted(a2, key=len)[0]),
+                len(sorted(a2, key=len)[-1]) -
+                len(sorted(a1, key=len)[0])])
 
 
 # %%
