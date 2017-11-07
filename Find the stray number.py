@@ -20,3 +20,10 @@ a = [1, 1, 3, 1, 1]
 b = [3, 4, 4, 4, 4]
 print(stray(a))
 print(stray(b))
+
+# Other solutions
+# (https://www.codewars.com/users/EDjur)
+
+
+def stray(arr):
+    return min(arr, key=arr.count)
