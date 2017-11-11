@@ -9,12 +9,17 @@ you need to return it.
 """
 
 # %%
+import numpy as np
 
 
 def sort_array(source_array):
     if not source_array:
         return source_array
-    pass
+
+    sa = np.array(source_array)
+    even_mask = np.ma.masked_where(sa % 2 == 0, sa)
+    return even_mask
+
 
 
 # %%
