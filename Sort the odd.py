@@ -9,22 +9,14 @@ you need to return it.
 """
 
 # %%
-import numpy as np
 
 
 def sort_array(source_array):
-    if not source_array:
-        return source_array
-
-    sa = np.array(source_array)
-    even_mask = np.ma.masked_where(sa % 2 == 0, sa)
-    return even_mask
-
+    odds = sorted([x for x in source_array if x % 2 != 0], reverse=True)
+    return [x if x % 2 == 0 else odds.pop() for x in source_array]
 
 
 # %%
 
 # tests
-
 print(sort_array([5, 3, 2, 8, 1, 4]))
-print(sort_array([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4])
