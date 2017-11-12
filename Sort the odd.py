@@ -20,3 +20,4 @@ def sort_array(source_array):
 
 # tests
 print(sort_array([5, 3, 2, 8, 1, 4]))
+print(sort_array([0, 3, 0, 8, 1, 4]))
