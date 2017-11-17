@@ -7,10 +7,8 @@ def productFib(prod):
     f1 = 1
     f2 = 1
     while(True):
-        if f1*f2 == prod:
-            return([f1, f2, True])
-        if f1*f2 > prod:
-            return([f1, f2, False])
+        if f1*f2 >= prod:
+            return([f1, f2, f1*f2 == prod])
         f2 = f1 + f2
         f1 = f2 - f1
 
