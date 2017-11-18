@@ -4,10 +4,10 @@
 
 
 def expanded_form(num):
-    t = [l + '/1' + '0'*(i-1) for i, l in enumerate(str(num)) if l != '0' if l != '.' if i != 0]
-    if str(num)[0] != 0:
-        return str(num)[0] + ' + ' + ' + '.join(t)
-    return ' + '.join(t)
+    upper, lower = str(num).split(sep='.')
+    upper = [l + '0'*(len(upper)-i-1) for i, l in enumerate(upper) if l != '0']
+    lower = [l + '/1' + '0'*(i+1) for i, l in enumerate(lower) if l != '0']
+    return ' + '.join([' + '.join(out) for out in [upper, lower] if out != []])
 
 
 # %%
@@ -16,5 +16,8 @@ def expanded_form(num):
 
 
 print(expanded_form(1.24))
+print(expanded_form(807.304))
+print(expanded_form(0.03))
 print(expanded_form(1.24) == '1 + 2/10 + 4/100')
 print(expanded_form(7.304) == '7 + 3/10 + 4/1000')
+print(expanded_form(807.304) == '800 + 7 + 3/10 + 4/1000')
