@@ -4,7 +4,8 @@
 
 
 def expanded_form(num):
-    return str(num)
+    t = [l + '0'*(len(str(num))-i-1) for i, l in enumerate(str(num)) if l != '0']
+    return ' + '.join(t)
 
 
 # %%
