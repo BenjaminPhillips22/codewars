@@ -16,7 +16,7 @@ def expanded_form(num):
 
 
 print(expanded_form(1.24))
-print(expanded_form(807.304))
+print(expanded_form(1234.5678))
 print(expanded_form(0.03))
 print(expanded_form(1.24) == '1 + 2/10 + 4/100')
 print(expanded_form(7.304) == '7 + 3/10 + 4/1000')
