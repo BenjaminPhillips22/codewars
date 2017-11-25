@@ -21,3 +21,22 @@ def iter_pi(epsilon):
 
 print(iter_pi(0.1))
 print(iter_pi(0.01))
+
+# %%
+
+# other solutions
+# I like this one for it's readability
+
+from math import pi
+
+
+def iter_pi(epsilon):
+    my_pi = 0
+    n = sign = 1
+    
+    while epsilon < abs(pi - my_pi):
+        my_pi += 4.0 / n * sign
+        n += 2
+        sign *= -1
+    
+    return [n//2, round(my_pi, 10)]
